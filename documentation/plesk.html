@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plesk Documentation - Jack O'Sullivan</title>
+</head>
+<body>
+    <header>
+        <h1>Plesk Documentation</h1>
+        <ul>
+            <li><a href="https://jackosullivan.dev/documentation/index.html">Back to Documentation</a></li>
+            <li><a href="https://jackosullivan.dev/">Back to Home</a></li>
+        </ul>
+    </header>
+    <main>
+        <section>
+            <h2>Plesk</h2>
+            <p>Plesk is a control panel commonly used for shared hosting platforms. </p>
+        </section>
+        <section>
+            <h3>Plesk CLI</h3>
+            <p>The Plesk CLI is a set of command-line tools which can be used to manage Plesk without using the web interface. It is much more in-depth than what I shall cover here, however I have included a small number of useful tools from the CLI below which are useful when investigating and resolving issues with Plesk servers.</p>
+            <h4>Accessing Plesk web-interface using CLI</h4>
+            <p>These are the two commands you will likely need if you don't have the admin password for Plesk. The first command is for Plesk versions up to 12.5 and will give you the admin password. The second command is for Plesk 17 and up, and will give you a one-time login link.</p>
+            <h5>Prior to Onyx</h5>
+            <pre>/usr/local/psa/bin/admin --show-password</pre>
+            <h5>Onyx and Later</h5>
+            <pre>plesk login</pre>
+            <h4>Accessing MySQL using CLI</h4>
+            <p>If you don't have the admin MySQL password, then depending on your version of Plesk, you can retrieve / access MySQL using the CLI. This is only possible via the Plesk CLI on Onyx, but previous versions of Plesk also have a method of accessing MySQL which I have also documented here.</p>
+            <h5>Prior to Onyx</h5>
+            <pre>mysql -uadmin -p`cat /etc/psa/.psa.shadow`</pre>
+            <h5>Onyx and Later</h5>
+            <pre>plesk db</pre>
+            <h4>Dumping databases using CLI</h4>
+            <p>The Plesk db CLI also has the facility to dump databases to file. It is somewhat more straight forward than using the mysqldump command and have to cat the shadow file out which is why I have included it here. As is the case with large parts of the Plesk CLI, I am unsure as to when this was introduced and so I have also included the old method.</p>
+            <h5>Prior to Onyx</h5>
+            <pre>mysqldump -uadmin -p`cat /etc/psa.psa.shadow` [database_name]</pre>
+            <h5>Onyx and Later</h5>
+            <pre>plesk db dump [database_name]</pre>
+        </section>
+        <section>
+            <h3>Passive FTP</h3>
+            <p>Typically when using NATing within your solution, you will need to configure passive FTP differently to ensure it functions correctly.This guide explains the process. The guide also assumes you are running ProFTPd.</p>
+            <h4>Step 1</h4>
+            <p>Edit the `/etc/proftpd.conf` file and locate the `Global` section. Within the global section, you will need to explicitly set the passive FTP ports like the following:</p>
+            <pre>
+&lt;Global&gt;
+    PassivePorts 40000 40100
+&lt;/Global&gt;
+            </pre>
+            <h4>Step 2</h4>
+            <p>Restart the FTP service using the following command. The specific command you will run repends on your Operating System. If you are unsure as to which to use, then default to the CentOS 6 example.</p>
+            <h5>CentOS 6</h5>
+            <pre>service xinetd restart</pre>
+            <h5>CentOS 7</h5>
+            <pre>systemctl restart xinetd</pre>
+            <h4>Step 3</h4>
+            <p>Ensure that the passive ports you have configured on your firewall. If you have a hardware firewall / security groups then you will likely need to configure these within your hosting provider's control panel. If you are using a software firewall such as `iptables` then the following command may be useful.</p>
+            <pre>iptables -A INPUT -p tcp --match multiport --dports 40000:40100 -j ACCEPT</pre>
+            <p>If you continue to have issues with this issue, then I would suggest contacting your hosting provider to ensure that it is configured correctly.</p>
+        </section>
+        <section>
+            <ul>
+                <li><a href="https://jackosullivan.dev/documentation/index.html">Back to Documentation</a></li>
+                <li><a href="https://jackosullivan.dev/">Back to Home</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Jack O'Sullivan, 2023.</p>
+    </footer>
+</body>
+</html>

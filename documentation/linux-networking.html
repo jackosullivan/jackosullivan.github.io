@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Networking Documentation - Jack O'Sullivan</title>
+</head>
+<body>
+    <header>
+        <h1>Linux Networking Documentation</h1>
+        <ul>
+            <li><a href="https://jackosullivan.dev/documentation/index.html">Back to Documentation</a></li>
+            <li><a href="https://jackosullivan.dev/">Back to Home</a></li>
+        </ul>
+    </header>
+    <main>
+        <section>
+            <h2>Disable IPv6 on Ubuntu</h2>
+            <p>Edit `/etc/sysctl.conf` and and add the following lines at the end:</p>
+            <pre>
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+            </pre>
+            <p>After that run:</p>
+            <pre>cat /proc/sys/net/ipv6/conf/all/disable_ipv6</pre>
+            <p>If it reports `1` means you have disabled IPV6. If it reports `0` then continue to follow the guide.</p>
+            <p>Run command: </p>
+            <pre>sysctl -p</pre>
+            <p>you will see this in terminal:</p>
+            <pre>
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
+            </pre>
+            <p>Run the following again:</p>
+            <pre>cat /proc/sys/net/ipv6/conf/all/disable_ipv6</pre>
+        </section>
+        <section>
+            <ul>
+                <li><a href="https://jackosullivan.dev/documentation/index.html">Back to Documentation</a></li>
+                <li><a href="https://jackosullivan.dev/">Back to Home</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Jack O'Sullivan, 2023.</p>
+    </footer>
+</body>
+</html>

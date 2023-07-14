@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange / Microsoft 365 Documentation - Jack O'Sullivan</title>
+</head>
+<body>
+    <header>
+        <h1>Exchange / Microsoft 365 Documentation</h1>
+        <ul>
+            <li><a href="https://jackosullivan.dev/documentation/index.html">Back to Documentation</a></li>
+            <li><a href="https://jackosullivan.dev/">Back to Home</a></li>
+        </ul>
+    </header>
+    <main>
+        <section>
+            <h2>Outlook automatically connecting to Office365 instead of Exchange</h2>
+            <p>When this occurs, this usually means that your Office365 mailbox has been added to Outlook rather than Exchange. This can happen even when you have selected Exchange Server during setup in some circumstances.</p>
+            <p>You can confirm that this is the case within Outlook by going to File > Info at which you should see that the account settings indicate that Outlook is connecting to https://outlook.office365.com/owa/ which is incorrect. </p>
+            <p>To fix this, we need to make a change to the Windows Registry. You will need to configure the following registry key:</p>
+            <pre>
+HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Outlook\AutoDiscover
+DWORD: ExcludeExplicitO365Endpoint
+Value = 1
+            </pre>
+            <p>A reboot should then resolve the issue with Outlook connecting to Office365 instead of Exchange.</p>
+        </section>
+        <section>
+            <ul>
+                <li><a href="https://jackosullivan.dev/documentation/index.html">Back to Documentation</a></li>
+                <li><a href="https://jackosullivan.dev/">Back to Home</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Jack O'Sullivan, 2023.</p>
+    </footer>
+</body>
+</html>
