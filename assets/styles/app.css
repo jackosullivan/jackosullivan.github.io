@@ -39,20 +39,32 @@ header li {
 }
 
 header a {
-    color: white;
-    background-color: rgb(57, 58, 58);
+    background-color: white;
+    color: rgb(57, 58, 58);
     padding: 1em;
     margin: 0 0.2em;
     display: block;
     text-decoration: none;
-    border-radius: 0 0 1em 1em;
 }
 
 header a:hover {
-    background-color: rgb(79, 79, 79);
+    text-decoration: underline;
 }
 
 main {
+    width: 100%;
     max-width: 1024px;
     margin: 5em auto;
+}
+
+main > section {
+    margin: 2em auto;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(57, 58, 58);
+    padding: 3em;
+    font-family: "Red Hat Display";
+    color: white;
 }
