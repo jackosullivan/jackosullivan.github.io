@@ -11,6 +11,12 @@ h1,h2,h3,h4,h5,h6 {
 
 pre {
     font-family: 'Red Hat Mono';
+    display: inline-block;
+    background-color: rgb(57, 58, 58);
+    color: white;
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 0.2em;
 }
 
 header {
