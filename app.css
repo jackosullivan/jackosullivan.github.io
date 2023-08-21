@@ -71,6 +71,17 @@ footer {
     padding: 2em;
 }
 
+.return {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+    background-color: rgb(57, 58, 58);
+    color: white;
+    border-radius: 2em;
+    margin: 1em;
+}
+
 /* About Section */
 
 .about .flex-container {
