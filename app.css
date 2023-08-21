@@ -78,8 +78,6 @@ footer {
     flex-wrap: wrap;
 }
 .about .flex-object-25 {
-    visibility: hidden;
-    display: none;
     flex: calc(100% - 2em - 2px);
     margin: 0.5em;
     padding: 0.5em;
@@ -88,6 +86,7 @@ footer {
 }
 .about .flex-object-25 img {
     width: 100%;
+    max-width: 100px;
     border-radius: 50%;
     border: 1px solid #e3e5e7;
     box-shadow: 5px 5px 5px #e3e5e7;
@@ -270,10 +269,11 @@ footer {
         max-width: calc(75% - 2em - 2px);
     }
     .about .flex-object-25 {
-        display: inline-block;
-        visibility: visible;
         flex: calc(25% - 2em - 2px);
         max-width: calc(25% - 2em - 2px);
+    }
+    .about .flex-object-25 img {
+        max-width: 100%;
     }
     .experience .flex-object {
         flex: calc(50% - 2em - 2px);
