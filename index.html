@@ -1,60 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jack O'Sullivan</title>
-    <meta name="description" content="IT specialist covering topics such as Platforms, DevOps, Cloud, and Linux.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+    <title>Jack O'Sullivan</title>    <meta name="description" content="IT specialist covering topics such as Platforms, DevOps, Cloud, and Linux.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;600&amp;family=Red+Hat+Mono&amp;family=Red+Hat+Text&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles/app.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Jack O'Sullivan</h1>
         <h2>IT Specialist</h2>
-        <ul>
-            <li><a href="https://jackosullivan.dev/">Home</a></li>
-            <li><a href="https://jackosullivan.dev/blog">Blog</a></li>
-            <li><a href="https://jackosullivan.dev/documentation">Documentation</a></li>
-            <li><a href="https://links.jackosullivan.dev/">Links</a></li>
-        </ul>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact &amp; Socials</a></li>
+        </ul>
+    </nav>
     <main>
-        <section>
-            <h3>About Me</h3>
-            <p>With nearly a decade of experience, I am an IT consultant with expertise Cloud, DevOps, Platforms, and Linux systems.</p>
+        <section class="about" id="about">
+            <div class="flex-container">
+                <div class="flex-object-25">
+                    <img src="https://links.jackosullivan.dev/headshot.jpeg" alt="">
+                </div>
+                <div class="flex-object-75">
+                    <h1>About Me</h1>
+                    <p>With nearly a decade of experience, I am an IT consultant with expertise Cloud, DevOps, Platforms, and Linux systems.</p>
+                    <div class="industries">
+                        <p>Industries I have worked in include:</p>
+                        <ul class="list-point">
+                            <li>Software Development</li>
+                            <li>Data Center</li>
+                            <li>Cyber Security</li>
+                            <li>Intelligence</li>
+                        </ul>
+                    </div>
+                    <p>My work has involved both public and private sector clients.</p>
+                </div>
+            </div>
         </section>
-
-        <section>
-            <h3>Applications I Use</h3>
-            <ul>
-                <li><a href="https://www.microsoft.com/en-gb/edge">Microsoft Edge</a> - My preferred web browser.</li>
-                <li><a href="https://code.visualstudio.com/">VS Code</a> - My preferred IDE, very versatile and generally clean looking.</li>
-                <li><a href="https://apps.apple.com/gb/app/amphetamine/id937984704?mt=12">Amphetamine</a> - For those times you want to prevent your Mac from going to sleep.</li>
-                <li><a href="https://www.videolan.org/vlc/">VLC</a> - For when you need to play a media file that QuickTime won't play.</li>
-                <li><a href="https://herd.laravel.com/">Laravel Herd</a> - I recently started using Herd for Laravel development and so far I'm really liking it.</li>
-            </ul>
+        <section class="experience" id="experience">
+            <h1>Experience</h1>
+            <div class="flex-container">
+                <div class="flex-object">
+                    <img src="naimuri.png" alt="">
+                    <h2>IT Consultant</h2>
+                    <h3>Naimuri</h3>
+                    <h4>June 2022 - July 2023</h4>
+                </div>
+                <div class="flex-object">
+                    <h2>Systems Administrator</h2>
+                    <h3>Secarma</h3>
+                    <h4>August 2018 - January 2022</h4>
+                    <img src="secarma.png" alt="">
+                </div>
+                <div class="flex-object">
+                    <img src="ukfast.jpeg" alt="">
+                    <h2>Linux Engineer</h2>
+                    <h3>UKFast</h3>
+                    <h4>February 2016 - August 2018</h4>
+                </div>
+                <div class="flex-object">
+                    <h2>Junior DevOps Engineer</h2>
+                    <h3>Bright Future Software</h3>
+                    <h4>July 2013 - February 2016</h4>
+                    <img src="brightfuturesoftware.png" alt="">
+                </div>
+            </div>
         </section>
-
-        <section>
-            <h3>Socials</h3>
-            <ul>
-                <li><a href="https://twitter.com/jackwosullivan">Twitter</a></li>
-                <li><a href="https://github.com/jackosullivan">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/jackwosullivan/">LinkedIn</a></li>
-            </ul>
+        <section class="education" id="education">
+            <h1>Education</h1>
+            <div class="flex-container">
+                <div class="flex-object">
+                    <h2>Rochdale Sixth Form College</h2>
+                    <h3>2011 - 2013</h3>
+                </div>
+                <div class="flex-object">
+                    <h2>Wardle High School</h2>
+                    <h3>2006 - 2011</h3>
+                </div>
+            </div>
         </section>
-        <section>
-            <h3>SSH Public Key</h3>
-            <p>ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEVcvyUMUF80fBGpuXApwKBeVWIIn9lzIkqX4lsZ1AXC ssh@jackosullivan.dev</p>
+        <section class="applications" id="applications">
+            <h1>Software I Use</h1>
+            <div class="flex-container">
+                <div class="flex-object">
+                    <h2><a href="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">Red Hat Enterprise Linux</a></h2>
+                    <p>I have utilised RHEL and a number of it's derivatives such as CentOS, Fedora, and Oracle Linux in both a personal and professional capacity.</p>
+                </div>
+                <div class="flex-object">
+                    <h2><a href="https://www.clusterlabs.org/pacemaker/">Pacemaker</a></h2>
+                    <p>I have built a number of active-passive clusters on bare-metal utilising Pacemaker and corosync which have been utilised extensively in production environments.</p>
+                </div>
+                <div class="flex-object">
+                    <h2><a href="#">Percona</a></h2>
+                    <p>Percona is a database software tool built on top of MySQL and PostgreSQL which features advanced tools for backups, high availability, and monitoring.</p>
+                </div>
+                <div class="flex-object">
+                    <h2><a href="https://www.microsoft.com/en-gb/edge">Microsoft Edge</a></h2>
+                    <p>My preferred web browser.</p>
+                </div>
+                <div class="flex-object">
+                    <h2><a href="https://code.visualstudio.com/">VS Code</a></h2>
+                    <p>My preferred IDE, very versatile and generally clean looking.</p>
+                </div>
+                <div class="flex-object">
+                    <h2><a href="https://apps.apple.com/gb/app/amphetamine/id937984704?mt=12">Amphetamine</a></h2>
+                    <p>For those times you want to prevent your Mac from going to sleep.</p>
+                </div>
+                <div class="flex-object">
+                    <h2><a href="https://www.videolan.org/vlc/">VLC</a></h2>
+                    <p>For when you need to play a media file that QuickTime won't play.</p>
+                </div>
+                <div class="flex-object">
+                    <h2><a href="https://herd.laravel.com/">Laravel Herd</a></h2>
+                    <p>I recently started using Herd for Laravel development and so far I'm really liking it.</p>
+                </div>
+            </div>
         </section>
-        <section>
-            <h3>Email</h3>
-            <a href="mailto:hello@jackosullivan.dev">hello@jackosullivan.dev</a>
+        <section class="contact" id="contact">
+            <h1>Contact &amp; Socials</h1>
+            <div class="flex-container">
+                <div class="flex-object">
+                    <h2><a href="mailto:hello@jackosullivan.dev">hello@jackosullivan.dev</a></h2>
+                </div>
+                <div class="flex-object">
+                    <h2><a href="https://twitter.com/jackwosullivan">Twitter</a></h2>
+                </div>
+                <div class="flex-object">
+                    <h2><a href="https://github.com/jackosullivan">GitHub</a></h2>
+                </div>
+                <div class="flex-object">
+                    <h2><a href="https://www.linkedin.com/in/jackwosullivan/">LinkedIn</a></h2>
+                </div>
+            </div>
+        </section>
+        <section class="ssh-key">
+            <h1>SSH Public Key</h1>
+            <code>ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEVcvyUMUF80fBGpuXApwKBeVWIIn9lzIkqX4lsZ1AXC ssh@jackosullivan.dev</code>
         </section>
     </main>
     <footer>

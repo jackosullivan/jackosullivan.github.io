@@ -1,0 +1,256 @@
+/* CSS Reset */
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Text', sans-serif;
+    text-decoration: none;
+}
+
+/* General Theming */
+
+body {
+    max-width: 1024px;
+    margin: 0 auto;
+    border-left: 1px solid #e3e5e7;
+    border-right: 1px solid #e3e5e7;
+    padding: 2em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+code {
+    font-family: 'Red Hat Mono', monospace;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+section {
+    border-bottom: 1px solid #e3e5e7;
+    padding: 2em;
+}
+
+section h1 {
+    display: inline-block;
+    padding: 0 0.2em;
+    border-bottom: 1px solid #e3e5e7;
+    margin-bottom: 1em;
+}
+
+section:first-of-type {
+    border-top: 1px solid #e3e5e7;
+}
+
+header {
+    text-align: center;
+    padding: 2em;
+}
+
+nav {
+    text-align: center;
+    border-top: 1px solid #e3e5e7;
+}
+
+nav li {
+    display: inline-block;
+}
+nav a {
+    display: block;
+    padding: 1em;
+}
+
+.experience img {
+    display: inline;
+    max-width: calc(100% - 2em);
+    padding: 1em;
+}
+
+.industries {
+    margin: 1em;
+}
+
+.list-point {
+    list-style:disc;
+    max-width: 50%;
+    margin: 1em auto;
+}
+
+.experience h2 {
+    font-size: 100%;
+}
+.experience h3 {
+    font-size: 90%;
+}
+.experience h4 {
+    font-size: 80%;
+}
+
+/* Flex container for about section */
+
+.about .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.about .flex-object-25 {
+    display: inline-block;
+    flex: calc(25% - 2em - 2px);
+    max-width: calc(25% - 2em - 2px);
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: center;
+    line-height: 1.7;
+}
+.about .flex-object-25 img {
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #e3e5e7;
+}
+.about .flex-object-75 {
+    display: inline-block;
+    flex: calc(75% - 2em - 2px);
+    max-width: calc(75% - 2em - 2px);
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #e3e5e7;
+    text-align: center;
+    line-height: 1.7;
+}
+@media (max-width: 800px) {
+    .about .flex-object-75 {
+        flex: calc(100% - 2em - 2px);
+        max-width: calc(100% - 2em - 2px);
+    }
+}
+@media (max-width: 800px) {
+    .about .flex-object-25 {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+/* Flex container for experience section */
+
+.experience .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.experience .flex-object {
+    display: block;
+    flex: calc(25% - 2em - 2px);
+    max-width: calc(25% - 2em - 2px);
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #e3e5e7;
+    text-align: center;
+    line-height: 1.7;
+}
+@media (max-width: 900px) {
+    .experience .flex-object {
+        flex: calc(50% - 2em - 2px);
+        max-width: calc(50% - 2em - 2px);
+    }
+}
+@media (max-width: 600px) {
+    .experience .flex-object {
+        flex: calc(100% - 2em - 2px);
+        max-width: calc(100% - 2em - 2px);
+    }
+}
+
+/* Flex container for Education section */
+
+.education .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.education .flex-object {
+    display: inline-block;
+    flex: calc(50% - 2em - 2px);
+    max-width: calc(50% - 2em - 2px);
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #e3e5e7;
+    text-align: center;
+    line-height: 1.7;
+}
+@media (max-width: 800px) {
+    .education .flex-object {
+        flex: calc(100% - 2em - 2px);
+        max-width: calc(100% - 2em -2px);
+    }
+}
+
+/* Flex container for applications section */
+
+.applications .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.applications .flex-object {
+    display: inline-block;
+    flex: calc(33% - 2em - 2px);
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #e3e5e7;
+    text-align: center;
+    line-height: 1.7;
+}
+@media (max-width: 800px) {
+    .applications .flex-object {
+        flex: calc(50% - 2em - 2px);
+    }
+}
+@media (max-width: 600px) {
+    .applications .flex-object {
+        flex: calc(100% - 2em - 2px);
+    }
+}
+
+/* Flex container for contact section */
+
+.contact .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact .flex-object {
+    display: inline-block;
+    flex: calc(50% - 2em - 2px);
+    max-width: calc(50% - 2em - 2px);
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #e3e5e7;
+    text-align: center;
+    line-height: 1.7;
+}
+@media (max-width: 800px) {
+    .contact .flex-object {
+        flex: calc(100% - 2em - 2px);
+        max-width: calc(100% - 2em - 2px);
+    }
+}
+
+.ssh-key code {
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #e3e5e7;
+    text-align: center;
+    line-height: 1.7;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+footer {
+    text-align: center;
+    padding: 2em;
+}
