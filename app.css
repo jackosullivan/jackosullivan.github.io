@@ -10,63 +10,50 @@
 
 /* General Theming */
 
-body {
+.main-page {
     max-width: 1024px;
     margin: 0 auto;
     border-left: 1px solid #e3e5e7;
     border-right: 1px solid #e3e5e7;
     padding: 2em;
 }
-
 .flex-object {
     box-shadow: 5px 5px 5px #e3e5e7;
 }
-
-
-
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Red Hat Display', sans-serif;
 }
-
 code {
     font-family: 'Red Hat Mono', monospace;
 }
-
 ol, ul {
 	list-style: none;
 }
-
 a {
     color: black;
     text-decoration: underline;
 }
-
 section {
     border-bottom: 1px solid #e3e5e7;
-    padding: 2em;
+    padding: 2em 0;
 }
-
 section h1 {
     display: inline-block;
     padding: 0 0.2em;
     border-bottom: 1px solid #e3e5e7;
     margin-bottom: 1em;
 }
-
 section:first-of-type {
     border-top: 1px solid #e3e5e7;
 }
-
 header {
     text-align: center;
     padding: 2em;
 }
-
 nav {
     text-align: center;
     border-top: 1px solid #e3e5e7;
 }
-
 nav li {
     display: inline-block;
 }
@@ -74,45 +61,26 @@ nav a {
     display: block;
     padding: 1em;
 }
-
-.experience img {
-    display: inline;
-    max-width: calc(100% - 2em);
-    padding: 1em;
-    border-top: 1px solid #e3e5e7;
-    margin: 1em auto;
-}
-
-.industries {
-    margin: 1em;
-}
-
 .list-point {
     list-style:disc;
     max-width: 50%;
     margin: 1em auto;
 }
-
-.experience h2 {
-    font-size: 100%;
-}
-.experience h3 {
-    font-size: 90%;
-}
-.experience h4 {
-    font-size: 80%;
+footer {
+    text-align: center;
+    padding: 2em;
 }
 
-/* Flex container for about section */
+/* About Section */
 
 .about .flex-container {
     display: flex;
     flex-wrap: wrap;
 }
 .about .flex-object-25 {
-    display: inline-block;
-    flex: calc(25% - 2em - 2px);
-    max-width: calc(25% - 2em - 2px);
+    visibility: hidden;
+    display: none;
+    flex: calc(100% - 2em - 2px);
     margin: 0.5em;
     padding: 0.5em;
     text-align: center;
@@ -126,8 +94,7 @@ nav a {
 }
 .about .flex-object-75 {
     display: inline-block;
-    flex: calc(75% - 2em - 2px);
-    max-width: calc(75% - 2em - 2px);
+    flex: calc(100% - 2em - 2px);
     margin: 0.5em;
     padding: 0.5em;
     border: 1px solid #e3e5e7;
@@ -135,8 +102,11 @@ nav a {
     line-height: 1.7;
     box-shadow: 5px 5px 5px #e3e5e7;
 }
+.industries {
+    margin: 1em;
+}
 
-/* Flex container for experience section */
+/* Experience Section */
 
 .experience .flex-container {
     display: flex;
@@ -144,8 +114,7 @@ nav a {
 }
 .experience .flex-object {
     display: block;
-    flex: calc(25% - 2em - 2px);
-    max-width: calc(25% - 2em - 2px);
+    flex: calc(100% - 2em - 2px);
     margin: 0.5em;
     padding: 0.5em;
     border: 1px solid #e3e5e7;
@@ -167,11 +136,14 @@ nav a {
 }
 .experience img {
     display: inline;
-    margin: 1em auto;
+    width: calc(100% - 2em);
+    max-width: 250px;
     padding: 1em;
+    border-top: 1px solid #e3e5e7;
+    margin: 1em auto;
 }
 
-/* Flex container for projects section */
+/* Projects Section */
 
 .projects .flex-container {
     display: flex;
@@ -179,7 +151,7 @@ nav a {
 }
 .projects .flex-object {
     display: block;
-    flex: calc(33% - 2em - 2px);
+    flex: calc(100% - 2em - 2px);
     margin: 0.5em;
     padding: 0.5em;
     border: 1px solid #e3e5e7;
@@ -210,7 +182,7 @@ nav a {
     border-bottom: 1px solid #e3e5e7;
 }
 
-/* Flex container for Education section */
+/* Education Section */
 
 .education .flex-container {
     display: flex;
@@ -218,8 +190,7 @@ nav a {
 }
 .education .flex-object {
     display: inline-block;
-    flex: calc(50% - 2em - 2px);
-    max-width: calc(50% - 2em - 2px);
+    flex: calc(100% - 2em - 2px);
     margin: 0.5em;
     padding: 0.5em;
     border: 1px solid #e3e5e7;
@@ -227,7 +198,7 @@ nav a {
     line-height: 1.7;
 }
 
-/* Flex container for applications section */
+/* Applications Section */
 
 .applications .flex-container {
     display: flex;
@@ -235,7 +206,7 @@ nav a {
 }
 .applications .flex-object {
     display: inline-block;
-    flex: calc(33% - 2em - 2px);
+    flex: calc(100% - 2em - 2px);
     margin: 0.5em;
     padding: 0.5em;
     border: 1px solid #e3e5e7;
@@ -258,7 +229,7 @@ nav a {
     font-size: 80%;
 }
 
-/* Flex container for contact section */
+/* Contact Section */
 
 .contact .flex-container {
     display: flex;
@@ -266,14 +237,15 @@ nav a {
 }
 .contact .flex-object {
     display: inline-block;
-    flex: calc(50% - 2em - 2px);
-    max-width: calc(50% - 2em - 2px);
+    flex: calc(100% - 2em - 2px);
     margin: 0.5em;
     padding: 0.5em;
     border: 1px solid #e3e5e7;
     text-align: center;
     line-height: 1.7;
 }
+
+/* Public Key Section */
 
 .ssh-key code {
     display: inline-block;
@@ -289,52 +261,45 @@ nav a {
     box-shadow: 5px 5px 5px #e3e5e7;
 }
 
-footer {
-    text-align: center;
-    padding: 2em;
-}
-
-@media (max-width: 800px) {
-    body, section {
-        padding: 2em 0px;
-    }    
+@media (min-width: 800px) {
+    section {
+        padding: 2em;
+    }
     .about .flex-object-75 {
-        flex: calc(100% - 2em - 2px);
-        max-width: calc(100% - 2em - 2px);
+        flex: calc(75% - 2em - 2px);
+        max-width: calc(75% - 2em - 2px);
     }
     .about .flex-object-25 {
-        visibility: hidden;
-        display: none;
+        display: inline-block;
+        visibility: visible;
+        flex: calc(25% - 2em - 2px);
+        max-width: calc(25% - 2em - 2px);
     }
     .experience .flex-object {
         flex: calc(50% - 2em - 2px);
-        max-width: calc(50% - 2em - 2px);
     }
     .projects .flex-object {
         flex: calc(50% - 2em - 2px);
     }
-    .education .flex-object {
-        flex: calc(100% - 2em - 2px);
-        max-width: calc(100% - 2em -2px);
-    }
     .applications .flex-object {
         flex: calc(50% - 2em - 2px);
-    }
-    .contact .flex-object {
-        flex: calc(100% - 2em - 2px);
-        max-width: calc(100% - 2em - 2px);
     }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 1000px) {
     .experience .flex-object {
-        flex: calc(100% - 2em - 2px);
-        max-width: calc(100% - 2em - 2px);
+        flex: calc(25% - 2em - 2px);
     }
     .projects .flex-object {
-        flex: calc(100% - 2em - 2px);
+        flex: calc(33% - 2em - 2px);
+    }
+    .education .flex-object {
+        flex: calc(50% - 2em - 2px);
     }
     .applications .flex-object {
-        flex: calc(100% - 2em - 2px);
+        flex: calc(33% - 2em - 2px);
+    }
+    .contact .flex-object {
+        flex: calc(50% - 2em - 2px);
     }
 }
