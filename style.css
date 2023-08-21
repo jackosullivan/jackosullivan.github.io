@@ -156,6 +156,20 @@ nav a {
     text-align: center;
     line-height: 1.7;
 }
+.experience h2 {
+    font-size: 100%;
+}
+.experience h3 {
+    font-size: 90%;
+}
+.experience h4 {
+    font-size: 80%;
+}
+.experience img {
+    display: inline;
+    max-width: calc(100% - 2em);
+    padding: 1em;
+}
 @media (max-width: 900px) {
     .experience .flex-object {
         flex: calc(50% - 2em - 2px);
@@ -166,6 +180,46 @@ nav a {
     .experience .flex-object {
         flex: calc(100% - 2em - 2px);
         max-width: calc(100% - 2em - 2px);
+    }
+}
+
+/* Flex container for projects section */
+
+.projects .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.projects .flex-object {
+    display: block;
+    flex: calc(33% - 2em - 2px);
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid #e3e5e7;
+    text-align: center;
+    line-height: 1.7;
+}
+.projects h2 {
+    font-size: 100%;
+}
+.projects h3 {
+    font-size: 90%;
+}
+.projects h4 {
+    font-size: 80%;
+}
+.projects img {
+    display: inline;
+    max-width: calc(100% - 2em);
+    padding: 1em;
+}
+@media (max-width: 900px) {
+    .projects .flex-object {
+        flex: calc(50% - 2em - 2px);
+    }
+}
+@media (max-width: 600px) {
+    .projects .flex-object {
+        flex: calc(100% - 2em - 2px);
     }
 }
 
