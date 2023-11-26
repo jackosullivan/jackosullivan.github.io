@@ -16,6 +16,7 @@
     border-left: 1px solid #e3e5e7;
     border-right: 1px solid #e3e5e7;
     padding: 2em;
+    padding-top: 0;
 }
 .flex-object {
     box-shadow: 5px 5px 5px #e3e5e7;
