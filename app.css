@@ -55,7 +55,7 @@ nav a {
     display: block;
     padding: 1em;
 }
-nav:first {
+nav:first-of-type {
     border-top: none;
     border-bottom: 1px solid #e3e5e7;
 }
