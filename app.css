@@ -55,6 +55,10 @@ nav a {
     display: block;
     padding: 1em;
 }
+nav:first {
+    border-top: none;
+    border-bottom: 1px solid #e3e5e7;
+}
 .list-point {
     list-style:disc;
     max-width: 50%;
