@@ -45,6 +45,9 @@ header {
     text-align: center;
     padding: 2em;
 }
+.page-nav {
+    display: none;
+}
 nav {
     text-align: center;
     border-top: 1px solid #e3e5e7;
@@ -271,6 +274,9 @@ footer {
 }
 
 @media (min-width: 800px) {
+    .page-nav {
+        display: block;
+    }
     section {
         padding: 2em;
     }
